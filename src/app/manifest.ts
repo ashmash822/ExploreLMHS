@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function manifest(): MetadataRoute.Manifest { return { name: "LMHS | Start Here. Go Anywhere.", short_name: "LMHS Future", description: "Discover your LMHS Warrior Future.", start_url: "/", display: "standalone", background_color: "#f5f1e8", theme_color: "#183a8f", icons: [{ src: "/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "/icon-512.png", sizes: "512x512", type: "image/png" }] }; }

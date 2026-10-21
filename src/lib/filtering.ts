@@ -1,0 +1,3 @@
+import type { Pathway } from "@/content/pathways";
+export type PathwayFilters={search?:string;category?:string;provider?:string;collegeCredit?:boolean};
+export function filterPathways(pathways:Pathway[],filters:PathwayFilters){const needle=filters.search?.trim().toLowerCase()??"";return pathways.filter((p)=>(!needle||`${p.name} ${p.summary} ${p.category} ${p.careers.join(" ")}`.toLowerCase().includes(needle))&&(!filters.category||filters.category==="All pathways"||p.category===filters.category)&&(!filters.provider||filters.provider==="All providers"||p.provider.includes(filters.provider))&&(!filters.collegeCredit||p.collegeCredit));}
